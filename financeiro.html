@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floral</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+<header>
+    <input type="checkbox" id="toggler">
+    <label for="toggler" class="fas fa-bars"></label>
+ 
+    <a href="index.html" class="logo">Floral<span>.</span></a>
+ 
+    <nav class="navbar">
+        <a href="index.html">Início</a>
+        <a href="produtos.html">Flores</a>
+        <a href="avaliacao.html">Avaliações</a>
+        <a href="financeiro.html">Financeiro</a>
+    </nav>
+ 
+    <div class="icons">
+        <a href="produtos.html" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-shopping-cart"></a>
+        <a href="#" class="fas fa-user"></a>
+    </div>
+</header>
+       <section class="home" id="home">
+       
+        
+    <section class="financeiro" id="financeiro">
+
+<h1 class="heading2"><span>Painel Financeiro</span></h1>
+
+<div class="finance-box">
+
+<h3>Novo Projeto Floral</h3>
+<input type="text" id="projeto" placeholder="Ex: Coleção Dia das Mães">
+<button class="btn" onclick="addProjeto()">Adicionar Projeto</button>
+
+
+<h3>Dados pessoais</h3>
+<input type="text" id="cep" onblur="buscarCEP()" placeholder="Digite o CEP">
+<input type="text" id="cidade" placeholder="Cidade">
+<input type="text" id="estado" placeholder="Estado">
+
+<h3>Registrar Custo</h3>
+
+<input type="text" id="nome" placeholder="Nome do item">
+
+<select id="categoria">
+<option>Flores</option>
+<option>Embalagens</option>
+<option>Transporte</option>
+<option>Mão de Obra</option>
+<option>Marketing</option>
+</select>
+
+<input type="number" id="valor" placeholder="Valor">
+
+<select id="pagamento">
+<option>PIX</option>
+<option>Cartão</option>
+<option>Boleto</option>
+</select>
+
+<select id="status">
+<option>Pago</option>
+<option>Pendente</option>
+<option>Parcial</option>
+</select>
+
+<input type="date" id="data">
+
+
+<textarea id="obs" placeholder="Observações"></textarea>
+
+<button class="btn" onclick="addItem()">Salvar</button>
+
+
+
+</div>
+
+<div class="resumo">
+<div class="card" id="total">Custo Total: R$ 0,00</div>
+<div class="card" id="pago">Pago: R$ 0,00</div>
+<div class="card" id="pendente">Pendente: R$ 0,00</div>
+<div class="card" id="cotacao">Carregando cotação...</div>
+</div>
+
+<div id="listaCustos"></div>
+
+</section>
+
+<script src="financeiro.js"></script>
